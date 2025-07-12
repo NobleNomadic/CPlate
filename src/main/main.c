@@ -1,11 +1,10 @@
 #include "../header/header.h"
+#include "../header/programStates.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 #define CMD_LINE_ARGUMENT_COUNT 3
-#define PROGRAM_GOOD_STATE 0
-#define PROGRAM_FAILURE_STATE -1
 
 // Entry point (Function explainations as a single line comment)
 int main(int argc, char *argv[]) {
@@ -32,7 +31,7 @@ int main(int argc, char *argv[]) {
       Logging is done in the main file by checking programSuccess variable with:
       [*] for notifying
       [+] for a success
-      [-] for failure.
+      [-] for failure
       Debug by using: [DEBUG] {Program state variable}
     */
     // printf("[DEBUG] %d\n", programState);
