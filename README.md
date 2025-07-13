@@ -54,3 +54,8 @@ There should be at least 2 headers. 1 for defining the states (`programStates.h`
 Each project should have a README.md and build.sh script as well.
 All documentation should go in the README unless it is very large, in which case you can create other documentation files with links from the README.
 The build.sh script should use cd to go into the src/main folder, generate an exectuable, and then move it into the build folder.
+
+## Multithreaded Programs
+When creating a multithreaded program, you should have a main program state variable, but I would also recommend giving each thread a state variable.
+An indivdual thread worker function should not interact with the main program state variable, as multiple threads trying to update the state will cause race conditions.
+Instead, the main program can observe the state of each thread, and modify its state based on that in a more controlled way.
